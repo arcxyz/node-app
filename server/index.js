@@ -1,7 +1,7 @@
-var users = require('./routes/users');
+var configRoutes = require('./routes');
 
 function startServer(app, port) {
-	app.use('/users', users);
+	configRoutes(app);
 
 	app.listen(port, function() {
 		console.log('Server listening on port '+port);
